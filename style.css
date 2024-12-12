@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Syne:wght@400..800&display=swap');
+
+:root {
+    --ff: "Syne", sans-serif;
+    --ff2: "Fira Code", monospace;
+    --h1: 800 2rem/1.2em var(--ff);
+    --p: 400 1rem/1.5em var(--ff);
+    --p-code: 300 .7rem/2em var(--ff2);
+    --hue: 0;
+  
+/* The formula starts here */
+    --tertiary-hue: calc(var(--hue) + 300);
+    --accent-hue: calc(var(--hue) + 60);
+    --primary-color: hsl(var(--hue), 50%, 90%);
+    --pre-primary-color: hsl(var(--hue), 50%, 95%);
+    --secondary-color: hsl(var(--hue), 50%, 10%);
+    --tertiary-color: hsl(var(--tertiary-hue), 80%, 20%);
+    --accent-color: hsl(var(--accent-hue), 80%, 20%);
+}
+
+.dark {
+    --primary-color: hsl(var(--hue), 50%, 10%);
+    --pre-primary-color: hsl(var(--hue), 50%, 15%);
+    --secondary-color: hsl(var(--hue), 50%, 90%);
+    --tertiary-color: hsl(var(--tertiary-hue), 80%, 80%);
+    --accent-color: hsl(var(--accent-hue), 80%, 80%);
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+
+
+
+body {
+    width: 90%;
+    max-width: 1080px;
+    margin: 40px auto;
+    display: flex;
+    height: 80vh;
+    align-items: center;
+    gap: 20px;
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    font-family: var(--ff);
+    font: var(--p);
+}
+.c1{flex: 1;}
+#dark {
+    width: 12px;
+    fill: var(--secondary-color);
+    cursor: pointer;
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--pre-primary-color);
+    padding: 8px 11px;
+    border-radius: 20px;
+    box-shadow: 0 2px 2px hsla(var(--hue), 50%, 10%, .3), 0 4px 4px hsla(var(--hue), 50%, 10%, .15);
+    
+}
+a{
+    font: 800 1rem/1em var(--ff);
+    color: var(--accent-color);
+    margin-right: 20px;
+    text-underline-offset: 4px;
+}
+
+
+h1{
+    font: var(--h1);
+}
+span{
+    color: var(--accent-color);
+}
+.controls{
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 70%;
+    height: 4px;
+    background: var(--tertiary-color);
+    border-radius: 5px;
+    outline: none;
+}
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 8px;
+    height: 24px;
+    background: var(--tertiary-color);
+    border-radius: 4px;
+}
+input[type="number"] {
+    -webkit-appearance: none;
+    appearance: none;
+    color: var(--secondary-color);
+    font: var(--p);
+    padding: 8px;
+    width: 40px;
+    height: 20px;
+    border: solid 1px var(--tertiary-color);
+    border-radius: 4px;
+    background: transparent;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.c2{
+    
+    flex: 1;
+    font: var(--p-code);
+    background: var(--pre-primary-color);
+    color: var(--secondary-color);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 2px 2px hsla(var(--hue), 50%, 10%, .3), 0 4px 4px hsla(var(--hue), 50%, 10%, .15);
+}
+
+@media (max-width: 800px) {
+    body {
+        flex-direction: column;
+        height: 90vh;
+    }
+    .c2{
+        width: 90%;
+        padding: 20px;
+    }
+}
+
+#copy-code-btn {
+    display: inline-block;
+    margin-bottom: 10px;
+    padding: 8px 12px;
+    background: var(--accent-color);
+    color: var(--primary-color);
+    border: none;
+    border-radius: 4px;
+    font: 600 1rem/1 var(--ff);
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+#copy-code-btn:hover {
+    background: var(--secondary-color);
+    color: var(--pre-primary-color);
+}
+
+
+#how-it-works-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 12px;
+    background: var(--accent-color);
+    color: var(--primary-color);
+    border: none;
+    border-radius: 4px;
+    font: 600 1rem/1 var(--ff);
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+#how-it-works-btn:hover {
+    background: var(--secondary-color);
+    color: var(--pre-primary-color);
+}

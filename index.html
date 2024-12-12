@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+
+<html lang="en">
+    <svg id="dark" onclick="dark()" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path d="M12 2a10 10 0 100 20 10 10 0 000-20zm0 18a8 8 0 110-16 8 8 0 010 16z"/>
+    </svg>
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Picker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="c1">
+        <h1>To make a website,<span></span>   you need <span>4</span> colors</h1>
+        <p>2 for text and background(primary & secondary colors). 1 accent color to highlight important elements (number 4 & link). And an optional tertiary color to add a bit of personality (the hue slider).</p>
+        <button id="how-it-works-btn">How it works?</button>
+        
+        <div class="controls">
+            <p>Hue</p>
+            <input type="range" id="hue-slider" min="0" max="360" value="0">
+            <input type="number" id="hue-value">
+        </div>
+    </div>
+    <div class="c2">
+        <button id="copy-code-btn">Copy Code</button>
+        <pre id="code">:root {
+        --color-primary: hsl(0, 50%, 90%);
+        --color-secondary: hsl(0, 50%, 10%);
+        --color-tertiary: hsl(60, 80%, 20%);
+        --color-accent: hsl(300, 80%, 20%);
+    }
+.dark {
+        --color-primary: hsl(0, 50%, 10%);
+        --color-secondary: hsl(0, 50%, 90%);
+        --color-tertiary: hsl(60, 80%, 80%);
+        --color-accent: hsl(300, 80%, 80%);
+    }</pre>
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
